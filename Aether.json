@@ -424,6 +424,17 @@
         "name": "Left-4.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/Fox.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Fox.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Animated Animals/c840ecf725f81b661e92e8fc1f2d71c563380e42ca5afa9e87b62c01b9478eb9_Fox.glb",
+          "name": "Fox.glb"
+        }
       }
     ],
     "resourceFolders": []
@@ -2162,6 +2173,89 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "dcf9f079eedcaf459e611d2f433f7ee5f6a077b6276b2e584efe95fd25654c62",
+          "name": "Fox",
+          "type": "Scene3D::Model3DObject",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "centerLocation": "ModelOrigin",
+            "depth": 176,
+            "height": 176,
+            "keepAspectRatio": true,
+            "materialType": "StandardWithoutMetalness",
+            "modelResourceName": "Fox.glb",
+            "originLocation": "ModelOrigin",
+            "rotationX": 90,
+            "rotationY": 0,
+            "rotationZ": 90,
+            "width": 176,
+            "animations": [
+              {
+                "loop": true,
+                "name": "Idle",
+                "source": "Idle"
+              },
+              {
+                "loop": true,
+                "name": "Walk",
+                "source": "Walk"
+              },
+              {
+                "loop": true,
+                "name": "Run",
+                "source": "Gallop"
+              },
+              {
+                "loop": false,
+                "name": "Jump",
+                "source": "Gallop_Jump"
+              },
+              {
+                "loop": false,
+                "name": "Attack",
+                "source": "Attack"
+              },
+              {
+                "loop": false,
+                "name": "Death",
+                "source": "Death"
+              },
+              {
+                "loop": false,
+                "name": "Eating",
+                "source": "Eating"
+              },
+              {
+                "loop": true,
+                "name": "Idle2",
+                "source": "Idle_2"
+              },
+              {
+                "loop": false,
+                "name": "Idle2HeadLow",
+                "source": "Idle_2_HeadLow"
+              },
+              {
+                "loop": false,
+                "name": "IdleHitReactLeft",
+                "source": "Idle_HitReact_Left"
+              },
+              {
+                "loop": false,
+                "name": "IdleHitReactRight",
+                "source": "Idle_HitReact_Right"
+              },
+              {
+                "loop": false,
+                "name": "JumpToIdle",
+                "source": "Jump_ToIdle"
+              }
+            ]
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -2190,6 +2284,9 @@
           },
           {
             "objectName": "BowlingBallGreen"
+          },
+          {
+            "objectName": "Fox"
           }
         ]
       },
@@ -3043,6 +3140,10 @@
         {
           "name": "Health",
           "type": "Health::Health"
+        },
+        {
+          "name": "Object3D",
+          "type": "Scene3D::Base3DBehavior"
         },
         {
           "name": "Opacity",
