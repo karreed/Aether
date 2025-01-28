@@ -4534,6 +4534,25 @@
         "name": "CONTROLS3.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Come To (MAIN MENU AND MAYBE DIALOGUE).mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Come To (MAIN MENU AND MAYBE DIALOGUE).mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -4905,8 +4924,8 @@
               },
               "parameters": [
                 "",
-                "Dimension Creep (FINAL).mp3",
-                "1",
+                "Come To (MAIN MENU AND MAYBE DIALOGUE).mp3",
+                "2",
                 "yes",
                 "10",
                 ""
@@ -5110,7 +5129,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6455105703311492,
+        "zoomFactor": 0.7876290101673771,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -5325,6 +5344,39 @@
           "x": 145,
           "y": 280,
           "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Room_Count2",
+          "persistentUuid": "fc8c0fd4-8b70-46a7-8028-220788a2c9ad",
+          "width": 0,
+          "x": 19,
+          "y": 680,
+          "zOrder": 16,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 720,
+          "layer": "",
+          "name": "Im_hit",
+          "opacity": 64,
+          "persistentUuid": "ac1faf3c-00db-436b-b80a-e3f69f5a8244",
+          "width": 1280,
+          "x": 0,
+          "y": 0,
+          "zOrder": 17,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5622,6 +5674,8 @@
               "PercentDamageReduction": 0
             },
             {
+              "name": "Pathfinding",
+              "type": "PathfindingBehavior::PathfindingBehavior",
               "acceleration": 8000,
               "allowDiagonals": true,
               "angleOffset": 0,
@@ -5632,10 +5686,8 @@
               "gridOffsetX": 0,
               "gridOffsetY": 0,
               "maxSpeed": 400,
-              "name": "Pathfinding",
               "rotateObject": false,
-              "smoothingMaxCellGap": 1,
-              "type": "PathfindingBehavior::PathfindingBehavior"
+              "smoothingMaxCellGap": 1
             },
             {
               "name": "TopDownMovement",
@@ -9038,7 +9090,7 @@
               "Health": 3,
               "CurrentHealth": 0,
               "MaxHealth": 3,
-              "DamageCooldown": 0,
+              "DamageCooldown": 0.1,
               "AllowOverHealing": false,
               "IsHealthJustDamaged": false,
               "DamageToBeApplied": 0,
@@ -12870,10 +12922,10 @@
           "effects": [],
           "behaviors": [
             {
-              "cost": 2,
-              "impassable": true,
               "name": "PathfindingObstacle",
-              "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+              "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+              "cost": 2,
+              "impassable": true
             }
           ],
           "animations": [
@@ -12889,6 +12941,109 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Invisible_Wall",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Room_Count2",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Room Count : 0",
+          "font": "017232541c561313892baaf3c91d69acae462dbd99f9d519bdee22ae597b41b8_kenvector_future_thin.ttf",
+          "textAlignment": "left",
+          "characterSize": 24,
+          "color": {
+            "b": 239,
+            "g": 255,
+            "r": 190
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Room Count : 0",
+            "font": "017232541c561313892baaf3c91d69acae462dbd99f9d519bdee22ae597b41b8_kenvector_future_thin.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 24,
+            "color": "190;255;239"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Im_hit",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite2",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -12951,6 +13106,9 @@
             "objectName": "Slime"
           },
           {
+            "objectName": "Im_hit"
+          },
+          {
             "objectName": "Health2"
           },
           {
@@ -13000,6 +13158,9 @@
           },
           {
             "objectName": "NewSprite"
+          },
+          {
+            "objectName": "Room_Count2"
           }
         ]
       },
@@ -13071,6 +13232,25 @@
                   },
                   "parameters": [
                     "Invisible_Wall"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Room_Count2",
+                    "Text",
+                    "=",
+                    "\"Rooms Cleared : \" + GlobalVariableString(Room_Count)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Im_hit"
                   ]
                 }
               ]
@@ -13996,6 +14176,56 @@
                     "",
                     "10",
                     "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "Im_hit",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "Astra",
+                    "\"Damage\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "Astra",
+                    "\"Damage\"",
+                    ">=",
+                    "0.1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Im_hit"
                   ]
                 }
               ]
@@ -18116,6 +18346,28 @@
                 "Health",
                 "=",
                 "8"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "Dimension Creep (FINAL).mp3",
+                "1",
+                "10",
+                "10",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "StopSoundCanal"
+              },
+              "parameters": [
+                "",
+                "2"
               ]
             }
           ]
